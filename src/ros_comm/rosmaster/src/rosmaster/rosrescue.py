@@ -124,7 +124,7 @@ class RosRescue(object):
                 if not uriValidate[0] or not uriValidate[1]:
                     return None
                 proxy = ServerProxy(uri)
-                proxy.getName("/master")
+                proxy.getPid("/master")
                 live_nodes[caller_id] = proxy
                 #print("live node : "+ caller_id)
             except Fault as e:
